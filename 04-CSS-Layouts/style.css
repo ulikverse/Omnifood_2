@@ -362,6 +362,10 @@ aside {
   flex: 0 0 300px;
 }
 
+.aside {
+  background-color: red;
+}
+
 /*
 DEFAULTS:
 flex-grow: 0;
