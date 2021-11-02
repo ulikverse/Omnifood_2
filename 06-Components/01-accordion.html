@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Accordion Component</title>
+
+    <style>
+      /*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+        */
+
+      /* 
+        MAIN COLOR: #087F5B
+        GREY COLOR: #343A40
+        */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+      }
+
+      .item {
+
+      }
+      .number, .text {
+        font-size: 24px;
+        font-weight: 500;
+        color: #087F5B;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        stroke: #087F5B;
+      }
+      .hidden-box {
+
+      }
+
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .hidden-box ul {
+        color: #868e96;
+        margin-left: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      /* .hidden-box li {
+        margin-bottom: 12px;
+      } */
+
+    </style>
+  </head>
+  <body>
+    <div class="accordion">Test
+      <div class="item">
+        <p class="number">02</p>
+        <p class="text">How long do i have to return my chair?</p>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        >
+        <path
+        fill-rule="evenodd"
+        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+        />
+        <div class="hidden-box">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis adipisci quae quaerat odit, consequuntur ipsum dolor fugiat sunt incidunt nostrum fuga, assumenda debitis, repudiandae minima impedit repellendus iure reiciendis!</p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+              ab veniam eos nulla soluta cupiditate voluptatum expedita?
+            </li>
+            <li>
+              Explicabo, ab beatae doloribus natus magnam ullam commodi accusamus
+              sunt amet.
+            </li>
+            <li>
+              Qquo architecto delectus atque excepturi dignissimos rem voluptatem
+              consectetur quis est tenetur nisi a.
+            </li>
+            <li>
+              Assumenda ratione dolor explicabo iure et, maiores ut quasi aliquam
+              tempore sequi rem deleniti, commodi, eaque quibusdam odio! Optio
+              quos suscipit excepturi?
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </svg>
+  </body>
+</html>
