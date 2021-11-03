@@ -39,23 +39,40 @@
       .accordion {
         width: 700px;
         margin: 100px auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
       }
 
       .item {
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
 
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
       }
       .number, .text {
         font-size: 24px;
         font-weight: 500;
-        color: #087F5B;
+        /* color: #087F5B; */
       }
+
+      .number {
+        color: #ced4da;
+      }
+
       .icon {
         width: 24px;
         height: 24px;
         stroke: #087F5B;
       }
       .hidden-box {
-
+        grid-column: 2;
+        display: none;
       }
 
       .hidden-box p {
@@ -72,15 +89,61 @@
         gap: 12px;
       }
 
-      /* .hidden-box li {
-        margin-bottom: 12px;
-      } */
+      /* OPEN STATE */
+
+      .open {
+        border-top: 4px solid #087F5B;
+      }
+
+      .open .hidden-box {
+        display: block;
+      }
+
+      .open .number, .open .text {
+        color: #087F5B;
+      }
+
+
 
     </style>
   </head>
   <body>
-    <div class="accordion">Test
+
+    <div class="accordion">
       <div class="item">
+        <p class="number">01</p>
+        <p class="text">Where are these chairs assembled?</p>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        >
+        <path
+        fill-rule="evenodd"
+        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+        />
+        <div class="hidden-box">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis adipisci quae quaerat odi!</p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet?
+            </li>
+            <li>
+              Explicabo, ab beatae doloribus natus magnam ullam.
+            </li>
+            <li>
+              Qquo architecto delectus.
+            </li>
+            <li>
+              Assumenda ratione dolor explicabo iure et?
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item open">
         <p class="number">02</p>
         <p class="text">How long do i have to return my chair?</p>
         <svg
@@ -95,29 +158,58 @@
         clip-rule="evenodd"
         />
         <div class="hidden-box">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis adipisci quae quaerat odit, consequuntur ipsum dolor fugiat sunt incidunt nostrum fuga, assumenda debitis, repudiandae minima impedit repellendus iure reiciendis!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis adipisci quae quaerat odi!</p>
           <ul>
             <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-              ab veniam eos nulla soluta cupiditate voluptatum expedita?
+              Lorem ipsum dolor sit amet?
             </li>
             <li>
-              Explicabo, ab beatae doloribus natus magnam ullam commodi accusamus
-              sunt amet.
+              Explicabo, ab beatae doloribus natus magnam ullam.
             </li>
             <li>
-              Qquo architecto delectus atque excepturi dignissimos rem voluptatem
-              consectetur quis est tenetur nisi a.
+              Qquo architecto delectus.
             </li>
             <li>
-              Assumenda ratione dolor explicabo iure et, maiores ut quasi aliquam
-              tempore sequi rem deleniti, commodi, eaque quibusdam odio! Optio
-              quos suscipit excepturi?
+              Assumenda ratione dolor explicabo iure et?
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <p class="number">03</p>
+        <p class="text">Do you ship to countries outside the EU?</p>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        >
+        <path
+        fill-rule="evenodd"
+        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+        />
+        <div class="hidden-box">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis adipisci quae quaerat odi!</p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet?
+            </li>
+            <li>
+              Explicabo, ab beatae doloribus natus magnam ullam.
+            </li>
+            <li>
+              Qquo architecto delectus.
+            </li>
+            <li>
+              Assumenda ratione dolor explicabo iure et?
             </li>
           </ul>
         </div>
       </div>
     </div>
+
     </svg>
   </body>
 </html>
