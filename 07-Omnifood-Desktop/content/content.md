@@ -140,5 +140,3 @@ Privacy & terms
 - Pricing + Features
 - CTA
 - Footer
-
-test
