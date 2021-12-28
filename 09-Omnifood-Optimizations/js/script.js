@@ -11,32 +11,49 @@ console.log(h1);
 //   h1.style.padding = "5rem";
 // });
 
+///////////////////////////////////////////////////////////
+
+//Set current year
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
+
 ///////////////////////////////////////////////////////////
-// Fixing flexbox gap property missing in some Safari versions
-function checkFlexGap() {
-  var flex = document.createElement("div");
-  flex.style.display = "flex";
-  flex.style.flexDirection = "column";
-  flex.style.rowGap = "1px";
 
-  flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.createElement("div"));
+// Make Mobile navigation work
 
-  document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
-  flex.parentNode.removeChild(flex);
-  console.log(isSupported);
+const bntNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
 
-  if (!isSupported) document.body.classList.add("no-flexbox-gap");
-}
-checkFlexGap();
+bntNavEl.addEventListener(
+  "click",
+  function () {
+    headerEl.classList.toggle("nav-open");
+  }
 
-// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+  ///////////////////////////////////////////////////////////
+  // Fixing flexbox gap property missing in some Safari versions
+  // function checkFlexGap() {
+  //   var flex = document.createElement("div");
+  //   flex.style.display = "flex";
+  //   flex.style.flexDirection = "column";
+  //   flex.style.rowGap = "1px";
 
-/*
+  //   flex.appendChild(document.createElement("div"));
+  //   flex.appendChild(document.createElement("div"));
+
+  //   document.body.appendChild(flex);
+  //   var isSupported = flex.scrollHeight === 1;
+  //   flex.parentNode.removeChild(flex);
+  //   console.log(isSupported);
+
+  //   if (!isSupported) document.body.classList.add("no-flexbox-gap");
+  // }
+  // checkFlexGap();
+
+  // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
+  /*
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
   margin-right: 4.8rem;
 }
@@ -86,3 +103,4 @@ checkFlexGap();
   }
 }
 */
+);
